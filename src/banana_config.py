@@ -16,5 +16,5 @@ sampling_strategy = "random"  # how to access the replay memory
 max_steps_in_episode = 1000  # the max number of steps to run
 num_nodes = 256  # number of nodes used in the ANN layers 2 and 3
 
-unity_path = "Banana_Linux/Banana.x86_64"
-unity_path_novis = "Banana_Linux_NoVis/Banana.x86_64"
+unity_path = "../Banana_Linux/Banana.x86_64"
+unity_path_novis = "../Banana_Linux_NoVis/Banana.x86_64"

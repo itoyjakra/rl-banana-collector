@@ -31,13 +31,27 @@ To get started with training an RL agent in the Unity environment follow these s
     * [Mac OSX](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
     * [Windows (32-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
     * [Windows (64-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-1. Create a new Conda environment and install the requirements
+
+1. Create a new Conda environment
     ```
     conda create -n dqn python=3.8
     conda activate dqn
-    pip install -r requirements.txt
     ```
+
+1. Install the requirements
+    ```
+    cd unity_setup
+    pip install .
+    ```
+
 ## Training
+Define the path of the Unity environment downloaded in step 2 in the file `src/banana_config.py`.
+
+Example:
+```
+unity_path = "../Banana_Linux/Banana.x86_64"
+```
+
 To train a new agent, run the following from a terminal
 ```
 python run_agent.py
@@ -45,5 +59,6 @@ python run_agent.py
 
 ## Observe a trained agent
 ```
-python play_banana.py
+python play_banana.py <model type> <path to trained model>
 ```
+where model type could be either DQN or DDQN.
